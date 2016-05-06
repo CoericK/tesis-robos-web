@@ -5,6 +5,7 @@ import {Provider} from 'react-redux'
 import {store, history} from '../redux/store'
 import App from '../components/app'
 import Home from '../components/home'
+import Admin from '../components/admin'
 import NotFound from '../components/not-found'
 
 /* SPA routes:
@@ -16,7 +17,11 @@ render((
 			<Router history={history}>
 				<Route component={App} path="/">
 					<IndexRoute component={Home} />
-					<Route component={Home} path="banco" />
+					<Route component={Home} path="/" />
+				</Route>
+				<Route component={Admin} path="/admin">
+					<IndexRoute component={Admin} />
+					<Route component={Admin} path="/" />
 				</Route>
 				<Route component={NotFound} path="*"/>
 			</Router>

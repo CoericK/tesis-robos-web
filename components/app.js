@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Home from './home'
 import {decrement, increment} from '../redux/actions/banco'
 import _ from 'lodash'
+import AppBar from 'material-ui/lib/app-bar'
 // layaout
 
 const App = React.createClass({
@@ -18,6 +19,10 @@ const App = React.createClass({
 	render() {
 		return (
 		  <div>
+				<AppBar
+					title="Title"
+					iconClassNameRight="muidocs-icon-navigation-expand-more"
+				/>
 				<h1>APP PAGE</h1>
         <Home {...this.props} />
 		  </div>
